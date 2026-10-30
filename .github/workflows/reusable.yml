@@ -1,0 +1,12 @@
+name: reusable
+on:
+  workflow_call:
+    inputs:
+      debug:
+        type: boolean
+        default: false
+jobs:
+  work:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "reusable public ran debug=${{ inputs.debug }}"
